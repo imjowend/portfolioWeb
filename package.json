@@ -1,0 +1,17 @@
+{
+  "name": "portfolioweb",
+  "version": "1.0.0",
+  "description": "Portfolio Web Personal, para practicar todo lo que sé.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.15",
+    "postcss-cli": "^10.1.0",
+    "tailwindcss": "^3.3.3"
+  }
+}
