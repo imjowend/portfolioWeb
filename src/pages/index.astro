@@ -1,20 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
+import Badge from '../components/Badge.astro';
 ---
 
-<Layout title="Portfolio with Astro.">
-    <!-- <section>
-        <div class="mx-auto text-center mb-8 lg:mb-16">
-            <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-white">
-                Hey, soy Joaquin Vasquez
-            </h2> 
-            <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+<Layout title="Portfolio de Joaquin">
+    <section class="w-full lg:w-[740px] mx-auto py-44">
+        <div >
+            <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
+                Hey, soy Joaquin 
+                    <div class="flex justify-center items-center">
+                        <Badge>Disponible para trabajar</Badge>
+                    </div>
+            </h1> 
+            <p>
                 Software Developer
             </p>
         </div >
     </section>
-    <section>
+    <!-- <section>
         <h2>About<span>.</span></h2>
         <p>Software Developer from Buenos Aires, Argentina.</p>
         <p>Enthusiast for technology and programming.</p>
