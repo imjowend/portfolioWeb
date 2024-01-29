@@ -1,20 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Badge from '../components/Badge.astro';
+import LinkedInIcon from '../components/icons/LinkedIn.astro'
 ---
 
 <Layout title="Portfolio de Joaquin">
     <section class="w-full lg:w-[740px] mx-auto py-44">
         <div >
-            <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
+            <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
                 Hey, soy Joaquin 
-                    <div class="flex justify-center items-center">
+                    <a href="https://linkedin.com/in/joaquin-vasquez-calizaya" target="_blank" rel="noopener" class="flex justify-center items-center">
                         <Badge>Disponible para trabajar</Badge>
-                    </div>
+                    </a>
             </h1> 
-            <p>
-                Software Developer
-            </p>
+            <h2 class="text-2xl opacity-80 text-wrap">
+                Desarrollador de Software
+            </h2>
+            <ul>
+                <li><a href="https://linkedin.com/in/joaquin-vasquez-calizaya"> <LinkedInIcon class="w-g h-6" /> LinkedIn</a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
         </div >
     </section>
     <!-- <section>
