@@ -3,16 +3,20 @@ const currentYear = new Date().getFullYear()
 ---
 
 <footer
-  class="rounded-lg shadow m-4 bg-black/5 dark:bg-black/20 backdrop-blur-lg w-full xl:w-[1120px] mx-auto mb-10"
+  class="h-14 flex justify-center items-center mx-auto pt-2 sticky top-0 w-full z-10"
 >
-    <div
-        class="flex  justify-center items-center py-5 w-[1120px] mx-auto"
-    >
-        <span
-            class="text-sm sm:text-center"
-        >© {currentYear}
-            Joaquin Vasquez Calizaya. Todos los derechos reservados
-        </span>
-    </div>
-</footer> 
+  <div
+    class=" w-full md:w-3/4 lg:w-1/2 xl:w-2/5 h-full
+      md:px-6 px-3 py-1
+    flex flex-wrap flex-row items-center justify-center
+    "
+  >
+    <span
+      class="text-sm sm:text-center"
+      >
+      © {currentYear}
+      Joaquin Vasquez Calizaya. Todos los derechos reservados
+    </span>
 
+  </div>
+</footer>
