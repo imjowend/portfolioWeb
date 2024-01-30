@@ -1,34 +1,70 @@
 ---
+import AboutMe from "../components/AboutMe.astro"
 import Layout from '../layouts/Layout.astro';
 import Badge from '../components/Badge.astro';
-import LinkedInIcon from '../components/icons/LinkedIn.astro'
+import SocialPill from '../components/SocialPill.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import LinkedInIcon from '../components/icons/LinkedIn.astro';
+import GithubIcon from '../components/icons/GitHub.astro';
+import MailIcon from '../components/icons/Mail.astro'
+import CodeIcon from '../components/icons/Code.astro'
+import Projects from "../components/Projects.astro"
+import PDFIcon from "../components/icons/PDF.astro"
+import ProfileIcon from "../components/icons/Profile.astro"
 ---
 
-<Layout title="Portfolio de Joaquin">
-    <section class="w-full lg:w-[740px] mx-auto py-44">
-        <div >
-            <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+<Layout title="Portfolio de Joaquin - Desarrollador y Programador de Software" description="Contrata a Joaquin para crear tu Software. Desarrollador Web y de Software.">
+    
+    <SectionContainer class="py-44 pb-24">
+        <img
+                class="rounded-full size-12 mb-4"
+                src="https://avatars.githubusercontent.com/imjowend" 
+                alt="joaquin"
+            />
+            <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
                 Hey, soy Joaquin 
                     <a href="https://linkedin.com/in/joaquin-vasquez-calizaya" target="_blank" rel="noopener" class="flex justify-center items-center">
                         <Badge>Disponible para trabajar</Badge>
                     </a>
             </h1> 
-            <h2 class="text-2xl opacity-80 text-wrap">
+            <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
                 Desarrollador de Software
             </h2>
-            <ul>
-                <li><a href="https://linkedin.com/in/joaquin-vasquez-calizaya"> <LinkedInIcon class="w-g h-6" /> LinkedIn</a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-            </ul>
-        </div >
-    </section>
-    <!-- <section>
-        <h2>About<span>.</span></h2>
-        <p>Software Developer from Buenos Aires, Argentina.</p>
-        <p>Enthusiast for technology and programming.</p>
-    </section>
-	<section>
-        <h2>Projects<span>.</span></h2>
-    </section> -->
+            <nav class="flex gap-4 mt-8">
+                <SocialPill href="https://linkedin.com/in/joaquin-vasquez-calizaya">
+                    <LinkedInIcon class="size-4 md:size-6" /> 
+                        LinkedIn
+                </SocialPill>
+                <SocialPill href="https://github.com/imjowend">
+                    <GithubIcon class="size-4 md:size-6" /> 
+                        Github
+                </SocialPill>
+                <SocialPill href="mailto:joaquinvctrabajo@gmail.com">
+                    <MailIcon class="size-4 md:size-6" /> 
+                        joaquinvctrabajo@gmail.com
+                </SocialPill>
+                <SocialPill href="../../public/joaquin_vasquez_c_cv.pdf">
+                    <PDFIcon class="size-4 md:size-6" />
+                       Curriculum
+                </SocialPill>
+            </nav>
+    </SectionContainer>
+    <SectionContainer id="project">
+        <h2
+        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+        >
+            <CodeIcon class="size-7" />
+            Proyectos
+        </h2>
+        <Projects />
+    </SectionContainer>
+    <SectionContainer id="about">
+        <h2
+        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+        >
+            <ProfileIcon class="size-7" />
+            Sobre mi
+        </h2>
+        <AboutMe />
+    </SectionContainer>
 </Layout>
