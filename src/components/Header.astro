@@ -3,6 +3,7 @@ import SunIcon from '../components/icons/Sun.astro';
 //import MoonIcon from '../components/icons/Moon.astro';
 import Argentina from '../components/icons/Argentina.astro';
 import UnitedStates from '../components/icons/UnitedStates.astro'
+import ThemeToggle from '../components/ThemeToggle.astro'
 ---
 
 
@@ -52,8 +53,9 @@ import UnitedStates from '../components/icons/UnitedStates.astro'
         </div>
 
         <button type="button"
-            class="hover:bg-white/10 p-1 rounded-full px-1 sm:px-2 transition ease-in text-sm sm:text-base capitalize">
+            class="hover:bg-white/10 p-1 rounded-full px-1 sm:px-2 transition ease-in text-sm sm:text-base capitalize" id="theme-toggle" aria-label="Change color scheme">
             <SunIcon />
+            <ThemeToggle />
         </button>
     </nav>
 
