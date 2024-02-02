@@ -1,6 +1,8 @@
 ---
 import GitHub from "./icons/GitHub.astro"
 import Tailwind from "./icons/Tailwind.astro"
+import Django from "./icons/Django.astro"
+import Bootstrap from "./icons/Bootstrap.astro"
 import LinkButton from "./LinkButton.astro"
 
 const TAGS = {
@@ -9,22 +11,33 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  DJANGO: {
+    name: "Django",
+    class: "bg-[#003159] text-white",
+    icon: Django,
+  },
+  BOOTSTRAP: {
+    name: "Bootstrap",
+    class: "bg-[#003159] text-white",
+    icon: Bootstrap,
+  }
 }
 const PROJECTS = [
   {
-    title: "Proyecto 1",
+    title: "ITBANK",
     description:
-      "Reprehenderit excepteur ea consequat enim non incididunt dolore dolor quis labore laborum. Dolore culpa consequat .",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "https://placehold.co/640x480",
-    tags: [TAGS.TAILWIND],
+      "Home banking hecho con html, css, bootstrap, javascript, python, django.",
+    link: "https://github.com/imjowend",
+    github: "https://github.com/FinDevelopers/Sprint-8",
+    image: "../../itbank.jpg",
+    tags: [TAGS.DJANGO, TAGS.BOOTSTRAP],
   },
   {
     title: "Proyecto 2",
     description:
       "Reprehenderit excepteur ea consequat enim non incididunt dolore dolor quis labore laborum. Dolore culpa consequat .",
-    link: "https://adventjs.dev",
+    link: "https://github.com/imjowend",
+    github: "https://github.com/imjowend",
     image: "https://placehold.co/640x480",
     tags: [ TAGS.TAILWIND],
   },
