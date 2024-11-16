@@ -1,71 +1,49 @@
 ---
+import Layout from "../layouts/Layout.astro"
+
 import AboutMe from "../components/AboutMe.astro"
-import Layout from '../layouts/Layout.astro';
-import Badge from '../components/Badge.astro';
-import SocialPill from '../components/SocialPill.astro';
-import SectionContainer from '../components/SectionContainer.astro';
-import LinkedInIcon from '../components/icons/LinkedIn.astro';
-import GithubIcon from '../components/icons/GitHub.astro';
-import MailIcon from '../components/icons/Mail.astro'
-import CodeIcon from '../components/icons/Code.astro'
+import Briefcase from "../components/icons/Briefcase.astro"
+import CodeIcon from "../components/icons/Code.astro"
+import Experience from "../components/Experience.astro"
+import ProfileCheck from "../components/icons/ProfileCheck.astro"
 import Projects from "../components/Projects.astro"
-import PDFIcon from "../components/icons/PDF.astro"
-import ProfileIcon from "../components/icons/Profile.astro"
+import SectionContainer from "../components/SectionContainer.astro"
+import Hero from "../components/Hero.astro"
+import TitleSection from "../components/TitleSection.astro"
 ---
 
 <Layout title="Portfolio de Joaquin - Desarrollador y Programador de Software" description="Contrata a Joaquin para crear tu Software. Desarrollador Web y de Software.">
-    
-    <SectionContainer class="py-44 pb-24">
-        <img
-                class="rounded-full size-12 mb-4"
-                src="../../joaquin.webp" 
-                alt="joaquin"
-            />
-            <h1 class="dark:text-white text-black text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
-                Hey, soy Joaquin 
-                    <a href="https://linkedin.com/in/joaquin-vasquez-calizaya" target="_blank" rel="noopener" class="flex justify-center items-center">
-                        <Badge>Disponible para trabajar</Badge>
-                    </a>
-            </h1> 
-            <h2 class="dark:text-sky-200 text-blue-400  text-xl lg:text-2xl  text-wrap max-w-[700px]">
-                Desarrollador de Software con experiencia en Backend y automatización de pruebas. De Buenos Aires, Argentina.
 
-            </h2>
-            <nav class="flex gap-4 mt-8">
-                <SocialPill href="https://linkedin.com/in/joaquin-vasquez-calizaya">
-                    <LinkedInIcon class="size-4 md:size-6 " /> 
-                        <span class="hidden sm:inline ml-2">LinkedIn</span>
-                </SocialPill>
-                <SocialPill href="https://github.com/imjowend">
-                    <GithubIcon class="size-4 md:size-6" /> 
-                        <span class="hidden sm:inline ml-2">Github</span>
-                </SocialPill>
-                <SocialPill href="mailto:joaquinvctrabajo@gmail.com">
-                    <MailIcon class="size-4 md:size-6" />
-                        <span class="hidden sm:inline ml-2">joaquinvctrabajo@gmail.com</span>
-                </SocialPill>
-                <SocialPill href="../../public/joaquin_vasquez_c_cv.pdf">
-                    <PDFIcon class="size-4 md:size-6" />
-                        <span class="hidden sm:inline ml-2">Curriculum</span>
-                </SocialPill>
-            </nav>
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <Hero>
+      </slot>
+    </Hero>
     </SectionContainer>
-    <SectionContainer id="project">
-        <h2
-        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
-        >
-            <CodeIcon class="size-7" />
-            Proyectos
-        </h2>
-        <Projects />
+    <div class="space-y-24">
+    <SectionContainer id="experiencia">
+      <TitleSection>
+        <Briefcase class="size-8" />
+        Experiencia laboral
+      </TitleSection>
+      <Experience />
     </SectionContainer>
-    <SectionContainer id="about">
-        <h2
-        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
-        >
-            <ProfileIcon class="size-7" />
-            Sobre mi
-        </h2>
-        <AboutMe />
+
+    <SectionContainer id="proyectos">
+      <TitleSection>
+        <CodeIcon class="size-7" />
+        Proyectos
+      </TitleSection>
+      <Projects />
     </SectionContainer>
+
+    <SectionContainer id="sobre-mi">
+      <TitleSection>
+        <ProfileCheck class="size-8" />
+        Sobre mí
+      </TitleSection>
+      <AboutMe />
+    </SectionContainer>
+  </div>
+  </main>
 </Layout>
